@@ -1,10 +1,11 @@
 const express = require('express');
+const cors = require('cors');
 
 // create express app
 const app = express();
 // use body parser - middleware that parses the body to json
 app.use(express.json());
-
+app.use(cors());
 
 // logger
 const logger = (req, res, next) => {

@@ -1,17 +1,17 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <VotingPage :pollId="1"  />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import VotingPage from './components/votingPage/VotingPage.vue';
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    VotingPage,
+  },
+};
 </script>
 
 <style>
