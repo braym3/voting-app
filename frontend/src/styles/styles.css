@@ -1,0 +1,23 @@
+/* Import fonts */
+@font-face {
+    font-family: 'Outfit';
+    src: url('~@/assets/Outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+}
+
+/* Define global styles */
+body {
+    font-family: 'Outfit', sans-serif;
+    background-image: url('~@/assets/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional: Prevents scrolling on some browsers */
+    background-size: cover;
+    color: #ffffff; /* Set text color to white */
+}
+  
+h1 {
+    font-family: 'Outfit', sans-serif;
+    text-align: center;
+    color: #ffffff; /* Set header color to orange */
+}

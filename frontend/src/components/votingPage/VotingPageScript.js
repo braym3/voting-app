@@ -1,4 +1,5 @@
 import { getPollById, submitVote } from '../../services/apiService';
+import { isImportantWord } from '../../utils/wordProcessor';
 
 export default {
     // props - to recieve external data
@@ -43,6 +44,9 @@ export default {
             } catch (err) {
                 console.error('Error submitting vote:', err);
             }
+        },
+        getWordClass(word, index, words) {
+            return isImportantWord(word, index, words) ? 'extra-bold' : 'normal';
         },
     },
 };
