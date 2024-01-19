@@ -1,23 +1,61 @@
-/* Import fonts */
-@font-face {
-    font-family: 'Outfit';
-    src: url('~@/assets/Outfit/Outfit-VariableFont_wght.ttf') format('truetype');
-}
+@import './fonts.css';
 
-/* Define global styles */
+/* Global styles */
 body {
     font-family: 'Outfit', sans-serif;
     background-image: url('~@/assets/background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Optional: Prevents scrolling on some browsers */
+    background-attachment: fixed; /* prevents scrolling on some browsers */
     background-size: cover;
-    color: #ffffff; /* Set text color to white */
+    color: #ffffff;
 }
   
 h1 {
     font-family: 'Outfit', sans-serif;
     text-align: center;
-    color: #ffffff; /* Set header color to orange */
+    color: #ffffff;
+}
+
+.option-button,
+.submit-button {
+    font-family: 'Outfit', sans-serif;
+    width: 300px;
+    height: 50px;
+    margin: 0 auto 20px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.option-button {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 10px;
+}
+
+.option-button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.submit-button {
+    background-color: #ffffff;
+    color: rgba(0, 0, 0, 0.6);
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    font-weight: 750;
+}
+
+.submit-button:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #ffffff;
 }

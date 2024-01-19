@@ -6,11 +6,11 @@
             </span>
         </h1>
 
-        <div v-for="option in poll.options" :key="option.optionId">
-            <input type="radio" :id="option.optionId" :value="option.optionId" v-model="selectedOption" />
+        <div v-for="option in poll.options" :key="option.optionId" class="option-button">
+            <input type="radio" :id="option.optionId" :value="option.optionId" v-model="selectedOption" style="display: none;" />
             <label :for="option.optionId">{{ option.optionText }}</label>
         </div>
-        <button @click="submitVote">Submit Vote</button>
+        <button @click="submitVote" class="submit-button">SUBMIT</button>
     </div>
 </template>
 
