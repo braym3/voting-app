@@ -1,5 +1,7 @@
 <template>
     <div v-if="poll && poll.question">
+        <img src="@/assets/logo.png" alt="Logo" class="logo" />
+        
         <h1>
             <span v-for="(word, index) in poll.question.split(' ')" :key="index" :class="getWordClass(word, index, poll.question.split(' '))">
                 {{ index > 0 ? ' ' : '' }}{{ word }}
