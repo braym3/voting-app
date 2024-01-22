@@ -48,5 +48,8 @@ export default {
         getWordClass(word, index, words) {
             return isImportantWord(word, index, words) ? 'extra-bold' : 'normal';
         },
+        selectOption(optionId) {
+            this.selectedOption = optionId;
+        },
     },
 };
