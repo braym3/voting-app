@@ -2,13 +2,6 @@ import { getPollById, submitVote } from '../../services/apiService';
 import { isImportantWord } from '../../utils/wordProcessor';
 
 export default {
-    // props - to recieve external data
-    props: {
-        pollId: {
-            type: Number,
-            required: true,
-        },
-    },
     // data properties
     data() {
         return {
@@ -17,11 +10,17 @@ export default {
             selectedOption: null
         };
     },
+    // get poll ID as a number
+    computed: {
+        pollId() {
+            return Number(this.$route.params.pollId);
+        },
+    },
     // lifecycle hook - to fetch poll data when the component is created
     created() {
         this.fetchPollData();
     },
-    // watcher - to react to changes in the props
+    // watcher - to react to changes in the poll ID path param
     watch: {
         pollId: 'fetchPollData',
     },
@@ -39,8 +38,8 @@ export default {
             try {
                 // make api call to submit vote
                 await submitVote(this.pollId, this.selectedOption);
-                // update the UI
-                await this.fetchPollData();
+                // go to confirmation page
+                this.$router.push(`/confirmation/${this.pollId}`);
             } catch (err) {
                 console.error('Error submitting vote:', err);
             }
