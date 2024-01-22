@@ -1,16 +1,11 @@
 <template>
   <div id="app">
-    <VotingPage :pollId="1"  />
+    <router-view  />
   </div>
 </template>
 
 <script>
-import VotingPage from './components/votingPage/VotingPage.vue';
-
 export default {
-  components: {
-    VotingPage,
-  },
 };
 </script>
 

@@ -1,12 +1,6 @@
-import { getPollById } from "frontend/src/services/apiService";
+import { getPollById } from "../../services/apiService";
 
 export default {
-    props: {
-        pollId: {
-            type: Number,
-            required: true,
-        },
-    },
     data() {
         return {
             poll: {},
@@ -19,6 +13,9 @@ export default {
         sortedOptions() {
             // sort the options in descending amount of votes
             return this.poll.options.sort((a, b) => b.votes - a.votes);
+        },
+        pollId() {
+            return Number(this.$route.params.pollId);
         },
     },
     created() {
