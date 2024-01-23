@@ -63,6 +63,13 @@ describe('API Tests', () => {
                 chai.expect(option.votes).to.equal(testPoll1.options[index].votes);
             });
         });
+
+        it('should return 404 for a non-existent poll', async () => {
+            const res = await chai.request('http://localhost:4494').get('/api/polls/999');
+            
+            chai.expect(res).to.have.status(404);
+            chai.expect(res.body).to.deep.equal({ error: 'Poll not found' });
+        });
     });
 
     describe('POST /api/votes', () => {
@@ -89,6 +96,13 @@ describe('API Tests', () => {
                 { optionId: 2, optionText: 'Option B', votes: 7 },
                 { optionId: 3, optionText: 'Option C', votes: 2 }
             ]);
+        });
+
+        it('should return 404 for votes of a non-existent poll', async () => {
+            const res = await chai.request('http://localhost:4494').get('/api/votes/999');
+            
+            chai.expect(res).to.have.status(404);
+            chai.expect(res.body).to.deep.equal({ error: 'Poll not found' });
         });
     });
 });
