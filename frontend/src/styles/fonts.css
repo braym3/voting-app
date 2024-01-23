@@ -1,0 +1,7 @@
+/* Import fonts */
+@font-face {
+    font-family: 'Outfit';
+    font-weight: 1 999; /* variable weight range */
+    src: url('~@/assets/Outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+    font-display: swap;
+}

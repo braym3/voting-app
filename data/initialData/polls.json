@@ -1,0 +1,42 @@
+[
+    {
+        "pollId": 1,
+        "pollName": "Premier League Winner",
+        "question": "Who will win the Premier League?",
+        "options": [
+            {"optionId": 1, "optionText": "Manchester City", "votes": 0},
+            {"optionId": 2, "optionText": "Arsenal", "votes": 0},
+            {"optionId": 3, "optionText": "Liverpool", "votes": 0}
+        ]
+    },
+    {
+        "pollId": 2,
+        "pollName": "NBA Championship Contenders",
+        "question": "Which team do you think will win the NBA Championship?",
+        "options": [
+            {"optionId": 1, "optionText": "Los Angeles Lakers", "votes": 0},
+            {"optionId": 2, "optionText": "Brooklyn Nets", "votes": 0},
+            {"optionId": 3, "optionText": "Golden State Warriors", "votes": 0}
+        ]
+    },
+    {
+        "pollId": 3,
+        "pollName": "FIFA World Cup 2026 Winner",
+        "question": "Which country do you predict will win the FIFA World Cup 2026?",
+        "options": [
+            {"optionId": 1, "optionText": "Brazil", "votes": 0},
+            {"optionId": 2, "optionText": "Germany", "votes": 0},
+            {"optionId": 3, "optionText": "France", "votes": 0}
+        ]
+    },
+    {
+        "pollId": 4,
+        "pollName": "MLB MVP Race",
+        "question": "Who do you believe will be the MVP in the upcoming MLB season?",
+        "options": [
+            {"optionId": 1, "optionText": "Mike Trout", "votes": 0},
+            {"optionId": 2, "optionText": "Mookie Betts", "votes": 0},
+            {"optionId": 3, "optionText": "Fernando Tatis Jr.", "votes": 0}
+        ]
+    }
+]
