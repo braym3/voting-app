@@ -84,6 +84,22 @@ describe('API Tests', () => {
             chai.expect(res).to.have.status(201);
             chai.expect(res.body).to.deep.equal({ success: true });
         });
+
+        it('should return 400 for missing fields', async () => {
+            // vote missing poll ID
+            const incompleteVote1 = { optionId: 1 }; 
+            // vote missing option ID
+            const incompleteVote2 = { pollId: 1 }; 
+    
+            const res1 = await chai.request('http://localhost:4494').post('/api/votes').send(incompleteVote1);
+            const res2 = await chai.request('http://localhost:4494').post('/api/votes').send(incompleteVote2);
+    
+            chai.expect(res1).to.have.status(400);
+            chai.expect(res1.body).to.deep.equal({ error: 'Both pollId and optionId are required' });
+    
+            chai.expect(res2).to.have.status(400);
+            chai.expect(res2.body).to.deep.equal({ error: 'Both pollId and optionId are required' });
+        });
     });
 
     describe('GET /api/votes/:pollId', () => {

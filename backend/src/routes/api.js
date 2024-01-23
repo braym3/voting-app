@@ -22,6 +22,11 @@ router.post('/votes', async (req, res, next) => {
     const { pollId, optionId } = req.body; // destructure out of the body
 
 	try{
+		// check for missing fields
+        if (!pollId || !optionId) {
+            return res.status(400).json({ error: 'Both pollId and optionId are required' });
+        }
+
 		const poll = await pollModel.findOneAndUpdate(
             { pollId, 'options.optionId': optionId },
             { $inc: { 'options.$.votes': 1 } },
