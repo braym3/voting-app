@@ -101,7 +101,7 @@ While the current implementation focuses on functionality, a production-ready ap
 
 ### Future Improvements
 
-While working on implementing frontend testing with Jest and Selenium, I encountered version conflicts that proved challenging to resolve within the given time constraints. Ideally, I aspire to implement comprehensive testing for the frontend, utilizing Jest and Selenium to create both unit and end-to-end tests. This would significantly contribute to bolstering the application's reliability and security.
+While working on implementing frontend testing with Jest and Selenium, I encountered version conflicts that proved challenging to resolve within the given time constraints. Ideally, I would have liked to implement comprehensive testing for the frontend, utilizing Jest and Selenium to create both unit and end-to-end tests. This would significantly contribute to bolstering the application's reliability and security.
 
 Additionally, there's room for improvement in error handling and validation on both the frontend and backend. The current implementation is basic, and enhancing it would not only fortify the application against potential issues but also provide users with more informative feedback in the case of incorrect inputs.
 
