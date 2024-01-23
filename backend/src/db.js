@@ -1,8 +1,11 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://127.0.0.1:27017/voting-app', {})
-    .then(() => console.log('Connected to MongoDB'))
-    .catch(() => console.log('MongoDB connection error'));
+if (process.env.NODE_ENV !== 'test') {
+    // Connect to the production database only if not running tests
+    mongoose.connect('mongodb://127.0.0.1:27017/voting-app', {})
+      .then(() => console.log('Connected to MongoDB'))
+      .catch(() => console.log('MongoDB connection error'));
+}
 
 // define the schema for a poll
 const optionSchema = new mongoose.Schema({
