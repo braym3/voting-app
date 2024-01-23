@@ -51,7 +51,7 @@ Make sure you have the following installed:
 2. Start the frontend application:
    ```bash
    cd frontend
-    npm start
+    npm run serve
 
 3. Open your browser and go to http://localhost:8081 to access the voting app.
 
